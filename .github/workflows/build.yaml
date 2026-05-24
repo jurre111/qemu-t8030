@@ -23,7 +23,7 @@ jobs:
           make
           make install
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -40,7 +40,7 @@ jobs:
           make DESTDIR=$GITHUB_WORKSPACE/bin/ install
 
       - name: Publish binaries
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: aarch64_softmmu_linux
           path: ${{ github.workspace }}/bin/
@@ -93,7 +93,7 @@ jobs:
           make
           make install
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -110,7 +110,7 @@ jobs:
           make DESTDIR=$GITHUB_WORKSPACE/bin/ install
 
       - name: Publish binaries
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: linux
           path: ${{ github.workspace }}/bin/

@@ -75,9 +75,7 @@ jobs:
           path: ${{ github.workspace }}/bin/
 
   build_all_linux:
-    runs-on: ubuntu-20.04
-    container:
-      image: ubuntu:focal
+    runs-on: ubuntu-latest
     steps:
       - name: Install build dependencies
         run: |
